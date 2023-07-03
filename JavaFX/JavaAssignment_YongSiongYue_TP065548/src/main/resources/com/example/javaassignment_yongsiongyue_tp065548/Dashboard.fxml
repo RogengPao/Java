@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vb" prefHeight="659.0" prefWidth="979.0" style="-fx-background-color: #eeeee4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaassignment_yongsiongyue_tp065548.Dashboard">
+   <children>
+      <Label graphicTextGap="10.0" prefHeight="81.0" prefWidth="152.0" text="Home" textAlignment="RIGHT" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="28.0" />
+         </font>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+         <graphic>
+            <FontAwesomeIcon glyphName="HOME" />
+         </graphic>
+      </Label>
+      <LineChart fx:id="occupancyLineChart" axisSortingPolicy="NONE" prefHeight="318.0" prefWidth="921.0" style="-fx-background-color: whitesmoke; -fx-border-color: white; -fx-border-width: 0 0 2 0;" title="Total Rooms Ocuppiied">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <HBox prefHeight="253.0" prefWidth="978.0">
+         <children>
+            <VBox prefHeight="251.0" prefWidth="191.0" style="-fx-background-color: #e1f0f7;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="202.0" style="-fx-background-color: #71d3ff;" text="1st Floor" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="200.0" style="-fx-background-color: #71d3ff;" text="Occupancy Rate" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </Label>
+                  <PieChart fx:id="floor1Chart" prefHeight="204.0" prefWidth="179.0" title="Occupancy Rate" titleSide="BOTTOM" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="251.0" prefWidth="191.0" style="-fx-background-color: rgba(220,234,234,255);">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="207.0" style="-fx-background-color: #4ab7b1;" text="2nd Floor" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #4ab7b1;" text="Occupancy Rate" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </Label>
+                  <PieChart fx:id="floor2Chart" title="Occupancy Rate" titleSide="BOTTOM" />
+               </children>
+            </VBox>
+            <VBox layoutX="201.0" layoutY="10.0" prefHeight="251.0" prefWidth="191.0" style="-fx-background-color: rgba(247,236,225,255);">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="215.0" style="-fx-background-color: #fec86f;" text="Total Floor" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="206.0" style="-fx-background-color: #fec86f;" text="Occupancy Rate" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </Label>
+                  <PieChart fx:id="toatalFloorChart" title="Occupancy Rate" titleSide="BOTTOM" />
+               </children>
+            </VBox>
+            <VBox layoutX="392.0" layoutY="10.0" prefHeight="251.0" prefWidth="407.0" style="-fx-background-color: #fffffe;">
+               <children>
+                  <Label prefHeight="47.0" prefWidth="401.0" style="-fx-background-color: #da534f;" text="Upcomings Checkout" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <ListView fx:id="listViewCheckOut" prefHeight="209.0" prefWidth="379.0" style="-fx-background-color: #f1acaa;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

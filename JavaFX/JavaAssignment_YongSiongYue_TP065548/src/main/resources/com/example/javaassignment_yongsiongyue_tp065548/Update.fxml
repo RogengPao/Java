@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="329.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaassignment_yongsiongyue_tp065548.Update">
+   <children>
+      <HBox prefHeight="392.0" prefWidth="760.0">
+         <children>
+            <VBox prefHeight="391.0" prefWidth="383.0">
+               <children>
+                  <HBox prefHeight="42.0" prefWidth="328.0">
+                     <children>
+                        <Label text="Update">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding></HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="113.0" text="C. Name">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="updateName" disable="true" prefHeight="25.0" prefWidth="185.0" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="52.0" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="113.0" text="C. IC">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="updateIC" disable="true" prefHeight="25.0" prefWidth="185.0" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="93.0" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="113.0" text="C. Email">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="updateEmail" disable="true" prefHeight="25.0" prefWidth="185.0" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="134.0" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="113.0" text="C. Phone">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="updatePhone" disable="true" prefHeight="25.0" prefWidth="185.0" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="175.0" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="113.0" text="Booking Date">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="updateBookingDate" disable="true" prefHeight="25.0" prefWidth="185.0" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="216.0" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="113.0" text="Status">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="updateStatus" disable="true" prefHeight="25.0" prefWidth="185.0" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="391.0" prefWidth="482.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label fx:id="updateManagedBy" text="Managed By : Test">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets right="25.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="46.0" prefWidth="172.0" text="Room Number:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="updateRoomNumber" prefHeight="25.0" prefWidth="83.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="51.0" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="46.0" prefWidth="172.0" text="Start Date:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="updateStartDate" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="92.0" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="46.0" prefWidth="172.0" text="End Date">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="updateEndDate" prefHeight="25.0" prefWidth="175.0" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="133.0" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="46.0" prefWidth="172.0" text="Check In Time:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="updateCheckIn" prefWidth="150.0" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="174.0" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="46.0" prefWidth="172.0" text="Check Out Time:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="updateCheckOut" prefWidth="150.0" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="215.0" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="46.0" prefWidth="172.0" text="Total Days:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="daySpinner" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="256.0" prefHeight="41.0" prefWidth="427.0">
+                     <children>
+                        <Label prefHeight="46.0" prefWidth="172.0" text="Total Price:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="updatedTotalPrice" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</VBox>

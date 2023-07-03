@@ -1,0 +1,20 @@
+A-01,Standard,2-3,RM 350,Unavailable,2 Single Bed
+A-02,Standard,2-3,RM 350,Available,2 Single Bed
+A-03,Standard,2-3,RM 350,Available,2 Single Bed
+A-04,Standard,2-3,RM 350,Available,2 Single Bed
+A-05,Standard,2-3,RM 350,Available,2 Single Bed
+A-06,Standard,2-3,RM 350,Available,2 Single Bed
+A-07,Suite,3-5,RM 350,Available,1 Queen and 1 Single Bed
+A-08,Suite,3-5,RM 350,Available,1 Queen and 1 Single Bed
+A-09,Deluxe,4-6,RM 350,Available,1 King and 1 Queen Bed
+A-10,Deluxe,4-6,RM 350,Available,1 King and 1 Queen Bed
+A-11,Standard,2-3,RM 350,Available,2 Single Bed
+A-12,Standard,2-3,RM 350,Available,2 Single Bed
+A-13,Standard,2-3,RM 350,Available,2 Single Bed
+A-14,Standard,2-3,RM 350,Available,2 Single Bed
+A-15,Standard,2-3,RM 350,Available,2 Single Bed
+A-16,Standard,2-3,RM 350,Available,2 Single Bed
+A-17,Suite,3-5,RM 350,Available,1 Queen and 1 Single Bed
+A-18,Suite,3-5,RM 350,Available,1 Queen and 1 Single Bed
+A-19,Deluxe,4-6,RM 350,Available,1 King and 1 Queen Bed
+A-20,Deluxe,4-6,RM 350,Unavailable,1 King and 1 Queen Bed

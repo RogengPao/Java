@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="605.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaassignment_yongsiongyue_tp065548.CheckInDialog">
+   <content>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="571.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="67.0" prefWidth="600.0">
+               <children>
+                  <Label text="Managed By:">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="managedBy" alignment="CENTER" disable="true">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="480.0" layoutY="23.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="490.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="275.0" text="Room Number">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="HOME" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="roomNumber" prefHeight="25.0" prefWidth="93.0" />
+               </children>
+            </HBox>
+            <Label fx:id="roomNumberWarning" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="573.0" text="Invalid Input! Make sure a room is selected" textFill="RED">
+               <padding>
+                  <Insets right="30.0" />
+               </padding>
+            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="140.0" prefHeight="63.0" prefWidth="490.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="276.0" text="Customer Name">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="customerName" alignment="CENTER" prefHeight="25.0" prefWidth="244.0" promptText="Enter Customer Name" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="551.0">
+               <children>
+                  <Label fx:id="warningName" prefHeight="32.0" prefWidth="259.0" text="Make sure that is no spacing and the name is longer than 2 letters" textFill="RED" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="490.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="276.0" text="Customer IC">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="customerIC" alignment="CENTER" prefHeight="25.0" prefWidth="244.0" promptText="Enter Customer IC" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="551.0">
+               <children>
+                  <Label fx:id="warningIC" prefHeight="17.0" prefWidth="259.0" text="Invalid IC! Make sure it have 12 digits!" textFill="RED" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="203.0" prefHeight="63.0" prefWidth="490.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="276.0" text="Customer Email">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="customerEmail" alignment="CENTER" prefHeight="25.0" prefWidth="244.0" promptText="...@gmail.com" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="551.0">
+               <children>
+                  <Label fx:id="warningEmail" prefHeight="17.0" prefWidth="259.0" text="Invalid Email! Please follow the format!" textFill="RED" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="203.0" prefHeight="51.0" prefWidth="551.0">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="276.0" text="Customer Phone">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="customerPhone" alignment="CENTER" prefHeight="18.0" prefWidth="244.0" promptText="Enter Customer Phone Number">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="551.0">
+               <children>
+                  <Label fx:id="warningPhone" prefHeight="0.0" prefWidth="259.0" text="Invalid Phone Number! (10 Digits Format)" textFill="RED" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="266.0" prefHeight="63.0" prefWidth="490.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="276.0" text="Booking Date">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="bookingDate" alignment="CENTER_RIGHT" disable="true" prefHeight="25.0" prefWidth="175.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="329.0" prefHeight="63.0" prefWidth="490.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="276.0" text="Start Date">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="startDate" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="357.0" prefHeight="63.0" prefWidth="490.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="276.0" text="End Date">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="endDate" disable="true" prefHeight="25.0" prefWidth="174.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="392.0" prefHeight="63.0" prefWidth="490.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="276.0" text="Check In Time">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="checkInTime" prefHeight="25.0" prefWidth="175.0" visibleRowCount="5" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="551.0">
+               <children>
+                  <Label fx:id="checkInTimeWarning" prefHeight="17.0" prefWidth="259.0" text="Invalid Input! Field cannot be Empty!" textFill="RED" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="455.0" prefHeight="63.0" prefWidth="490.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="276.0" text="Check Out Time">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="checkOutTime" prefHeight="25.0" prefWidth="175.0" visibleRowCount="5" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="551.0">
+               <children>
+                  <Label fx:id="checkOutTimeWarning" prefHeight="17.0" prefWidth="259.0" text="Invalid Input! Field cannot be Empty!" textFill="RED" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="518.0" prefHeight="63.0" prefWidth="490.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="276.0" text="Total Days">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Spinner fx:id="daySpinner" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="568.0" prefHeight="63.0" prefWidth="490.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="276.0" text="Total Price">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="totalPrice" alignment="CENTER_RIGHT" disable="true" editable="false" prefHeight="25.0" prefWidth="81.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+</DialogPane>

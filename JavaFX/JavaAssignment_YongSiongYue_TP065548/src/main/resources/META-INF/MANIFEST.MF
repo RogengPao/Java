@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.example.javaassignment_yongsiongyue_tp065548.HelloApplic
+ ation
+

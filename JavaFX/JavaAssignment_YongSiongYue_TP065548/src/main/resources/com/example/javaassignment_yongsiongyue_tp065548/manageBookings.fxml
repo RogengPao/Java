@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaassignment_yongsiongyue_tp065548.ManageBookings">
+   <children>
+      <Label graphicTextGap="10.0" prefHeight="96.0" prefWidth="1002.0" style="-fx-background-color: GAINSBORO;" text="Manage Booking" textAlignment="RIGHT" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="28.0" />
+         </font>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+         <graphic>
+            <FontAwesomeIcon glyphName="USER_PLUS" />
+         </graphic>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="979.0" style="-fx-background-color: WHITE; -fx-border-width: 2 0 2 0; -fx-border-color: BLACK;">
+         <children>
+            <Label graphicTextGap="10.0" prefHeight="44.0" prefWidth="552.0" text="Booking Informations" wrapText="true">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIcon glyphName="BOOKMARK_ALT" />
+               </graphic>
+            </Label>
+            <Label alignment="CENTER" prefHeight="28.0" prefWidth="94.0" text="Search:">
+               <graphic>
+                  <FontAwesomeIcon glyphName="SEARCH" />
+               </graphic>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchBar" alignment="CENTER" prefHeight="25.0" prefWidth="156.0" promptText="Enter Customer Name">
+               <HBox.margin>
+                  <Insets right="15.0" top="3.0" />
+               </HBox.margin>
+            </TextField>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Button fx:id="addBooking" alignment="CENTER" mnemonicParsing="false" onAction="#addBooking" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: BLACK;" text="New" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="PLUS" />
+               </graphic>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Add" />
+              <MenuItem mnemonicParsing="false" text="Delete" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Sort" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="488.0" prefWidth="979.0">
+         <children>
+            <VBox prefHeight="488.0" prefWidth="280.0">
+               <children>
+                  <HBox prefHeight="244.0" prefWidth="979.0">
+                     <children>
+                        <VBox prefHeight="80.0" prefWidth="280.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1 1 1 0;" text="Upcoming Check In">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </Label>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="214.0" prefWidth="280.0">
+                                 <content>
+                                    <ListView fx:id="upcomingCheckedIn" prefWidth="276.0" />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="244.0" prefWidth="979.0">
+                     <children>
+                        <VBox prefHeight="80.0" prefWidth="280.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="308.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 1 1 1 0;" text="Upcoming Check Out">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </Label>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="223.0" prefWidth="280.0">
+                                 <content>
+                                    <ListView fx:id="upcomingCheckedOut" prefWidth="280.0" />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="488.0" prefWidth="699.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="699.0">
+                     <children>
+                        <Label fx:id="warning" text="Invalid Search! No such booking exists!" textFill="RED" visible="false" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="439.0" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="105.0" text="Managed By">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="managedBy" disable="true" prefHeight="25.0" prefWidth="136.0" />
+                     </children>
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="278.0" text="Room Number">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="roomNumber" disable="true" prefHeight="25.0" prefWidth="91.0" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="278.0" text="Customer Name">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="customerName" disable="true" prefHeight="25.0" prefWidth="226.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="55.0" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="278.0" text="Customer IC">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="customerIC" disable="true" prefHeight="25.0" prefWidth="226.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="97.0" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="278.0" text="Customer Email">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="customerEmail" disable="true" prefHeight="25.0" prefWidth="226.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="139.0" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="278.0" text="Customer Phone">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="customerPhone" disable="true" prefHeight="25.0" prefWidth="226.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="181.0" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="278.0" text="Booking Date">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="bookingDate" disable="true" prefHeight="25.0" prefWidth="226.0" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="223.0" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="278.0" text="Start Date">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="startDate" disable="true" prefHeight="25.0" prefWidth="226.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="268.0" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="278.0" text="End Date">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="endDate" disable="true" prefHeight="25.0" prefWidth="226.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="310.0" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="278.0" text="Check In Time">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="checkInTime" disable="true" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="352.0" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="278.0" text="Check Out Time">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="checkOutTime" disable="true" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="416.0" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="278.0" text="Status">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="status" disable="true" prefHeight="25.0" prefWidth="151.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="394.0" prefHeight="42.0" prefWidth="699.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="278.0" text="Total Price">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="price" disable="true" prefHeight="25.0" prefWidth="105.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="461.0" prefHeight="82.0" prefWidth="699.0">
+                     <children>
+                        <Button fx:id="checkInBookings" disable="true" mnemonicParsing="false" onAction="#bookingCheckIn" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: black;" text="Check In" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="BED" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="checkOutBookings" disable="true" layoutX="151.0" layoutY="20.0" mnemonicParsing="false" onAction="#bookingCheckOut" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: black;" text="Check Out" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SHARE" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="updateBookings" disable="true" layoutX="129.0" layoutY="29.0" mnemonicParsing="false" onAction="#bookingsUpdate" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: black;" text="Update" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="TASKS" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="deleteBookings" disable="true" layoutX="449.0" layoutY="29.0" mnemonicParsing="false" onAction="#bookingDelete" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: black;" text="Delete" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="TRASH" />
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding>
+                  </HBox>
+               </children></VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
